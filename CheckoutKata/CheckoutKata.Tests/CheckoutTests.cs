@@ -54,5 +54,33 @@ namespace CheckoutKata.Tests
             // Assert
             Assert.AreEqual(totalPrice, _checkout.GetTotalPrice());
         }
+
+        [TestMethod]
+        public void Checkout_GetTotalPrice_ScanProductAAndProductBReturnsCorrectTotalPriceOf80()
+        {
+            // Arrange
+
+            // Act
+            _checkout.Scan("A");
+            _checkout.Scan("B");
+
+            // Assert
+            Assert.AreEqual(80, _checkout.GetTotalPrice());
+        }
+
+        [TestMethod]
+        public void Checkout_GetTotalPrice_ScanAllProductsReturnsCorrectTotalPriceOf115()
+        {
+            // Arrange
+
+            // Act
+            _checkout.Scan("A");
+            _checkout.Scan("B");
+            _checkout.Scan("C");
+            _checkout.Scan("D");
+
+            // Assert
+            Assert.AreEqual(115, _checkout.GetTotalPrice());
+        }
     }
 }

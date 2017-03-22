@@ -7,15 +7,15 @@ namespace CheckoutKata
     public class Checkout : ICheckout
     {
         private readonly List<Product> _products;
+        private readonly List<string> _cart;
+        private int _totalPrice;
 
         public Checkout(List<Product> products)
         {
             _products = products;
             _cart = new List<string>();
+            _totalPrice = 0;
         }
-
-        public List<string> _cart { get; set; }
-        public int _totalPrice { get; set; }
 
         public void Scan(string sku)
         {
