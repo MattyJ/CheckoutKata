@@ -82,5 +82,35 @@ namespace CheckoutKata.Tests
             // Assert
             Assert.AreEqual(115, _checkout.GetTotalPrice());
         }
+
+        [TestMethod]
+        public void Checkout_GetTotalPrice_ScanProductAThreeTimesReturnsOfferPriceOf130()
+        {
+            // Arrange
+
+            // Act
+            for (int i = 0; i < 3; i++)
+            {
+                _checkout.Scan("A");
+            }
+
+            // Assert
+            Assert.AreEqual(130, _checkout.GetTotalPrice());
+        }
+
+        [TestMethod]
+        public void Checkout_GetTotalPrice_ScanProductBTwiceReturnsOfferPriceOf45()
+        {
+            // Arrange
+
+            // Act
+            for (int i = 0; i < 2; i++)
+            {
+                _checkout.Scan("B");
+            }
+
+            // Assert
+            Assert.AreEqual(130, _checkout.GetTotalPrice());
+        }
     }
 }
