@@ -5,7 +5,7 @@ namespace CheckoutKata
 {
     public interface ICheckout
     {
-        void Scan(string item);
+        void Scan(string sku);
         int GetTotalPrice();
     }
 }
