@@ -45,3 +45,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.suo
+CheckoutKata/CheckoutKata.Tests/bin/Debug/CheckoutKata.Tests.dll
+*.pdb
+CheckoutKata/CheckoutKata.Tests/bin/Debug/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+*.dll
